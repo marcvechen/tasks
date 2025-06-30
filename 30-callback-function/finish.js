@@ -12,4 +12,3 @@ const timeout = () =>
   }, 2000);
 
 timeout();
-dsadas
