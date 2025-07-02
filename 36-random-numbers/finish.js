@@ -14,7 +14,24 @@
  *  - для добавления случайного числа в массив с возвратом измененного массива
  */
 
-const MIN = 1000
-const MAX = 9999
+const min = 1000;
+const max = 9999;
 
-const myNumbers = [2355, 7235, 8135, 1762, 2361, 8351]
+const myNumbers = [2355, 7235, 8135, 1762, 2361, 8351];
+const newArray = [...myNumbers];
+let num = 0;
+do {
+  const num = Math.random() * (max - min) + min;
+  result = Math.floor(num);
+
+  newArray.push(result);
+} while (
+  num === 2355 ||
+  num === 7235 ||
+  num === 8135 ||
+  num === 1762 ||
+  num === 2361 ||
+  num === 8351
+);
+console.log("OLDARRAY", myNumbers);
+console.log("NEWARRAY", newArray);

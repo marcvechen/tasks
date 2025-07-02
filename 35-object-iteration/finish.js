@@ -9,7 +9,15 @@
 const myObject = {
   key1: true,
   key5: 10,
-  key3: 'abc',
+  key3: "abc",
   key4: null,
   key10: NaN,
+};
+for (let key in myObject) {
+  if (
+    myObject[key] === myObject["key1"] ||
+    myObject[key] === myObject["key3"]
+  ) {
+    console.log(myObject[key]);
+  }
 }
