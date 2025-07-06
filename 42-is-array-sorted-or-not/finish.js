@@ -11,15 +11,29 @@
  * 5. Если массив не отсортирован - вернуть "Массив не отсортирован"
  */
 
-const a = [5, 'abc', 10, 1]
-const b = [4, 10, 14, 25, 25, 50]
-const c = [150, 132, 80, 40]
-const d = [15, 26, 10, 23, 85]
-
-console.log(arraySortInfo(a)) // Некоторые элементы не являются числами
-console.log(arraySortInfo(b)) // Массив отсортирован по возрастанию
-console.log(arraySortInfo(c)) // Массив отсортирован по убыванию
-console.log(arraySortInfo(d)) // Массив не отсортирован
+const a = [5, "abc", 10, 1];
+const b = [4, 10, 14, 25, 25, 50];
+const c = [150, 132, 80, 40];
+const d = [15, 26, 10, 23, 85];
+function arraySortInfo(inputArray) {
+  if (!inputArray.every((elem) => typeof elem === "number")) {
+    return "Некоторые элементы не являются числами";
+  } else if (
+    inputArray.every((elem, i) => i === 0 || elem >= inputArray[i - 1])
+  ) {
+    return "Массив отсортирован по возрастанию";
+  } else if (
+    inputArray.every((elem, i) => i === 0 || elem <= inputArray[i - 1])
+  ) {
+    return "Массив отсортирован по убыванию";
+  } else {
+    return "Массив не отсортирован";
+  }
+}
+console.log(arraySortInfo(a)); // Некоторые элементы не являются числами
+console.log(arraySortInfo(b)); // Массив отсортирован по возрастанию
+console.log(arraySortInfo(c)); // Массив отсортирован по убыванию
+console.log(arraySortInfo(d)); // Массив не отсортирован
 
 /**
  * ПОДСКАЗКИ
