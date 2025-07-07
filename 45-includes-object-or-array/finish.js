@@ -14,7 +14,17 @@ const tags = [
   ["css", "flexbox"],
   ["html", "web-browser"],
 ];
-
+function isElementInArray(searchElement, inputArray) {
+  if (typeof searchElement === "object" && searchElement !== null) {
+    const toString = inputArray.map((element) => JSON.stringify(element));
+    const result = toString.includes(JSON.stringify(searchElement));
+    return result;
+  } else {
+    const toString = inputArray.map((element) => JSON.stringify(element));
+    const result = toString.includes(JSON.stringify(searchElement));
+    return result;
+  }
+}
 const fruits = [
   { title: "Orange", quantity: 10 },
   { title: "Banana", quantity: 5 },
