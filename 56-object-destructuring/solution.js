@@ -12,7 +12,7 @@ const personInfo = (person) => {
     location: { country: origin, city: homeCity },
     friendsQty = 0,
     createdAtYear = new Date().getFullYear(),
-  } = person
+  } = person;
 
   return {
     name,
@@ -21,21 +21,21 @@ const personInfo = (person) => {
     homeCity,
     friendsQty,
     createdAtYear,
-  }
-}
+  };
+};
 
 const person = {
-  name: 'Alice',
+  name: "Alice",
   age: 19,
   location: {
-    country: 'England',
-    city: 'London',
+    country: "England",
+    city: "London",
   },
-}
+};
 
-const result = personInfo(person)
+const result = personInfo(person);
 
-console.log(result)
+console.log(result);
 /*
 {
   name: "Alice",
