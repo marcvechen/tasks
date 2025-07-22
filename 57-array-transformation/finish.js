@@ -12,22 +12,32 @@
 const testPosts = [
   {
     postId: 234,
-    author: 'robd',
+    author: "robd",
     commentsQty: 5,
   },
   {
     postId: 823,
-    author: 'sady',
+    author: "sady",
   },
   {
     postId: 161,
-    author: 'merryl',
+    author: "merryl",
     commentsQty: 8,
   },
-]
+];
 
-const processedPosts = processPosts(testPosts)
-console.log(processedPosts)
+const processPosts = (array) => {
+  array.map((elem) => {
+    return {
+      postId: elem.postId + 1000,
+      postAuthor: elem.author,
+      postCommentsQty: elem.commentsQty ?? 0,
+    };
+  });
+};
+
+const processedPosts = processPosts(testPosts);
+console.log(processedPosts);
 /*
 [
   {
@@ -48,5 +58,5 @@ console.log(processedPosts)
 ]
 */
 
-console.log(testPosts)
+console.log(testPosts);
 // оригинальный массив должен остаться без изменений
