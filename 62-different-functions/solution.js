@@ -11,7 +11,7 @@
 // console.log(firstFunction(2, 3))
 
 function firstFunction(a, b) {
-  return a + b
+  return a + b;
 }
 
 // // We can assign new value
@@ -22,11 +22,11 @@ function firstFunction(a, b) {
 // secondFunction(2, 7)
 
 const secondFunction = function (a, b) {
-  return a + b
-}
+  return a + b;
+};
 
 // // New value can't be assigned
 // secondFunction = true
 
-console.log(firstFunction(2, 5))
-console.log(secondFunction(5, 10))
+console.log(firstFunction(2, 5));
+console.log(secondFunction(5, 10));
