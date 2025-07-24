@@ -10,8 +10,8 @@ const a = 5;
 const b = 10;
 
 if (b > a) {
-  c = a + b + c;
   let c = 2;
+  c = a + b + c;
   // ДО: ReferenceError: Cannot access 'c' before initialization
   // ПОСЛЕ: Нет ошибки
   console.log(c);

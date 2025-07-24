@@ -10,10 +10,14 @@ const objectWithNumbers = {
   x: 5,
   y: 20,
   z: 3,
-}
-
+};
+const mult = (obj) => {
+  const { x, y, z } = obj;
+  const result = x * y * z;
+  return result;
+};
 // Создайте функцию здесь
 
-const result = mult(objectWithNumbers)
-console.log(result)
+const result = mult(objectWithNumbers);
+console.log(result);
 // 300
