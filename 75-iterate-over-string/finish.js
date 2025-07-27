@@ -12,7 +12,12 @@ const str = "Today is the best day of my life";
 const check = (str) => {
   str.forEach(elem);
 };
-// Напишите код здесь
+
+str.split("").forEach((char) => {
+  if (vowels.includes(char)) {
+    vowelsCount += 1;
+  }
+});
 
 console.log(vowelsCount);
 // 9
