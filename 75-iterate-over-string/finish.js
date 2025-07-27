@@ -4,12 +4,15 @@
  * Гласные буквы - a, e, i, o, u
  */
 
-let vowelsCount = 0
-const vowels = ['a', 'e', 'i', 'o', 'u']
+let vowelsCount = 0;
+const vowels = ["a", "e", "i", "o", "u"];
 
-const str = 'Today is the best day of my life'
+const str = "Today is the best day of my life";
 
+const check = (str) => {
+  str.forEach(elem);
+};
 // Напишите код здесь
 
-console.log(vowelsCount)
+console.log(vowelsCount);
 // 9
